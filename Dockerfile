@@ -1,6 +1,6 @@
 FROM scratch
 ADD rootfs.tar.gz /
-RUN apk --update add openssh && rm -f /var/cache/apk/*
+RUN apk --update add openssh netcat-openbsd && rm -f /var/cache/apk/*
 RUN ssh-keygen -A
 RUN echo "PermitRootLogin no" >> /etc/ssh/sshd_config && \
   echo "PasswordAuthentication no" >> /etc/ssh/sshd_config && \
