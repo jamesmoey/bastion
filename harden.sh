@@ -86,4 +86,5 @@ find /usr/bin /bin ! -type d \
   -a ! -name sh \
   -a ! -name ssh \
   -a ! -name busybox \
+  -a ! -name nc \
   -delete
